@@ -19,10 +19,13 @@ io.on('connection', (socket) => {
     console.log('user disconnected');
   });
 
-  // Example of receiving a message from client
   socket.on('message', (msg) => {
     console.log(msg)
-    io.emit('getmsg', msg); // Broadcast message to all clients
+    io.emit('getmsg', msg);
+  });
+
+  socket.on('video', chunsk => {
+    io.emit('showVideo', chunsk);
   });
 });
 
