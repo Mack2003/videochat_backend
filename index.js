@@ -25,7 +25,8 @@ io.on('connection', (socket) => {
   });
 
   socket.on('video', chunsk => {
-    socket.broadcast.emit('showVideo', chunsk);
+    console.log(first)
+    socket.emit('showVideo', 'getting data');
   });
 });
 
