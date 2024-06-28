@@ -21,8 +21,7 @@ io.on('connection', (socket) => {
 
   // Example of receiving a message from client
   socket.on('message', (msg) => {
-    console.log('message: ' + msg);
-    io.emit('message', msg); // Broadcast message to all clients
+    io.emit('getmsg', msg); // Broadcast message to all clients
   });
 });
 
